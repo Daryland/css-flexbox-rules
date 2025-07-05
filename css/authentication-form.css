@@ -12,6 +12,10 @@ body {
 
 .content {
   padding: 30px;
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  gap: 30px; 
 }
 
 h2 {
@@ -27,6 +31,9 @@ p {
 form {
   border: 1px solid #a9a9a9;
   padding: 20px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px;
 }
 
 .subtext {
@@ -37,15 +44,39 @@ form {
 #sign-in,
 #sign-up {
   width: 100%;
+  max-width: 400px; 
 }
 
-a {
-  color: #335eea;
-  text-decoration: none;
+/* Style for the form header */
+.form-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; 
+  margin-bottom: 15px; 
 }
 
-label {
+.form-input-control,
+.form-checkbox-control,
+.form-submit-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-input-control label {
   font-weight: bold;
+  margin-bottom: 6px; 
+}
+
+/* Override for checkbox labels - not bold */
+.form-checkbox-control label {
+  font-weight: unset;
+  margin-left: 5px; 
+}
+
+.form-checkbox-control {
+    flex-direction: row; 
+    align-items: center; 
+    gap: 5px; 
 }
 
 input {
@@ -82,4 +113,45 @@ input[type="submit"]:hover {
 
 .form select {
   height: 30px;
+  width: 100%; 
+}
+
+.form-submit-control {
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+.form-group-horizontal-control {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px; 
+  width: 100%;
+}
+
+.form-group-horizontal-control .form-input-control {
+  width: 50%; 
+}
+
+.form-group-vertical-control {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px; 
+}
+
+.form-radio-control {
+    display: flex;
+    align-items: center; 
+    gap: 5px; 
+}
+
+a {
+  color: #335eea;
+  text-decoration: none;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #a9a9a9; 
+    height: 0;
 }

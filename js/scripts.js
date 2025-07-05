@@ -14,3 +14,14 @@ viewButtons.forEach((button) => {
     itemsContainer.classList.add(button.dataset.view);
   });
 });
+
+
+// New Code for Buy Button click event if you're not logged in can add "isLoggedIn state" at later date
+
+const buyButtons = document.querySelectorAll('.buy-btn');
+
+buyButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    window.location.href = './authentication-form.html';
+  });
+}); 
