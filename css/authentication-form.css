@@ -13,7 +13,6 @@ body {
 .content {
   padding: 30px;
   display: flex; 
-  flex-wrap: wrap;
   justify-content: center; 
   gap: 30px; 
 }
@@ -33,7 +32,7 @@ form {
   padding: 20px;
   display: flex; 
   flex-direction: column; 
-  gap: 15px;
+  gap: 30px;
 }
 
 .subtext {
@@ -44,7 +43,6 @@ form {
 #sign-in,
 #sign-up {
   width: 100%;
-  max-width: 400px; 
 }
 
 /* Style for the form header */
@@ -117,9 +115,11 @@ input[type="submit"]:hover {
 }
 
 .form-submit-control {
-  flex-direction: row; 
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
   align-items: center; 
-  justify-content: space-between; 
+  gap: 30px;
 }
 
 .form-group-horizontal-control {
@@ -135,13 +135,12 @@ input[type="submit"]:hover {
 
 .form-group-vertical-control {
     display: flex;
-    flex-direction: column; 
-    gap: 10px; 
+    flex-direction: row;
+    gap: 30px; 
 }
 
 .form-radio-control {
     display: flex;
-    align-items: center; 
     gap: 5px; 
 }
 
